@@ -67,7 +67,6 @@ public class HashMap implements MapInterface, DSPerformanceAPI {
         }
     }
 
-
     public int getGetLastActionSteps() {
         return countSteps;
     }
