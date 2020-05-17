@@ -1,7 +1,6 @@
 package me.barsopia.ami.algo;
 
 import me.barsopia.ami.dataStructure.implementations.StackImpl;
-import me.barsopia.ami.dataStructure.interfaces.Stack;
 
 import java.util.List;
 

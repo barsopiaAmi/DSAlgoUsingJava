@@ -13,7 +13,7 @@ public class StackTest {
     Stack<Integer> s;
 
     private StackImpl<Integer> getImpl() {
-        return new StackImpl<Integer>(10);
+        return new StackImpl<>(10);
     }
 
     private void assertListEquals(List<Integer> expected, List<Integer> actual) {

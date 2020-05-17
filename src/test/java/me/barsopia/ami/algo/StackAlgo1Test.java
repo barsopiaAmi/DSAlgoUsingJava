@@ -1,17 +1,11 @@
 package me.barsopia.ami.algo;
 
-import me.barsopia.ami.dataStructure.implementations.HashMap;
-import me.barsopia.ami.dataStructure.implementations.StackImpl;
-import me.barsopia.ami.dataStructure.interfaces.MapInterface;
-import me.barsopia.ami.dataStructure.interfaces.Stack;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-
-import static org.junit.Assert.*;
 
 public class StackAlgo1Test {
 

@@ -1,6 +1,5 @@
 package me.barsopia.ami.dataStructure.interfaces;
 
-import junit.framework.TestCase;
 import me.barsopia.ami.dataStructure.implementations.HashMap;
 import me.barsopia.ami.model.Student;
 import org.junit.Assert;
