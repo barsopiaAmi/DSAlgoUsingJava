@@ -7,6 +7,10 @@ import me.barsopia.ami.dataStructure.interfaces.Stack;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 import static org.junit.Assert.*;
 
 public class StackAlgo1Test {
@@ -32,4 +36,28 @@ public class StackAlgo1Test {
 
     }
 
+    public static void main(String[] args) throws FileNotFoundException {
+        Scanner scanner = new Scanner(new File("D:\\Ami\\DSAlgoUsingJava\\src\\main\\resources\\input03.txt"));
+        //test your code
+        long timeMillis = System.currentTimeMillis();
+        int n=scanner.nextInt();
+        StackAlgo1 s = new StackAlgo1(n);
+        for (int i = 0; i < n; i++) {
+            switch (scanner.nextInt()) {
+                case 1:
+                    s.push(scanner.nextInt());
+                    break;
+                case 2:
+                    s.pop();
+                    break;
+                case 3:
+                    int max = s.FindMaximumFromStack();
+                    System.out.println(max);
+                    break;
+            }
+        }
+
+        scanner.close();
+        System.out.println(System.currentTimeMillis() - timeMillis);
+    }
 }
