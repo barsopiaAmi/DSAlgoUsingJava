@@ -5,21 +5,21 @@ import me.barsopia.ami.dataStructure.interfaces.Stack;
 import java.util.Arrays;
 import java.util.List;
 
-public class StackImpl implements Stack {
+public class StackImpl<T> implements Stack<T> {
     int top;
-    Integer[] values;
+    Object[] values;
 
     public StackImpl(int capacity) {
         top = 0;
-        values = new Integer[capacity];
+        values = new Object[capacity];
     }
 
     public StackImpl() {
         top = 0;
-        values = new Integer[10];
+        values = new Object[10];
     }
 
-    public void push(int value) {
+    public void push(T value) {
         if (top == values.length) {
             this.values = Arrays.copyOf(values, values.length * 2);
         }
@@ -27,15 +27,15 @@ public class StackImpl implements Stack {
         top++;
     }
 
-    public int pop() {
+    public T pop() {
         top--;
-        int topValue = values[top];
+        T topValue = (T)values[top];
         values[top] = null;
         return topValue;
     }
 
-    public List<Integer> getAllElement() {
-        return Arrays.asList(values);
+    public List<T> getAllElement() {
+        return Arrays.asList((T[])values);
     }
 
     public int getSizeOfStack() {

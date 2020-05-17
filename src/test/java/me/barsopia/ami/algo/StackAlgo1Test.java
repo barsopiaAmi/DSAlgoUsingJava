@@ -41,7 +41,7 @@ public class StackAlgo1Test {
         //test your code
         long timeMillis = System.currentTimeMillis();
         int n=scanner.nextInt();
-        StackAlgo1 s = new StackAlgo1(n);
+        StackAlgo1 s = new StackAlgo1();
         for (int i = 0; i < n; i++) {
             switch (scanner.nextInt()) {
                 case 1:

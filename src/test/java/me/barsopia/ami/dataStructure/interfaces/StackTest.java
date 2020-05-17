@@ -10,10 +10,10 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 public class StackTest {
-    Stack s;
+    Stack<Integer> s;
 
-    private StackImpl getImpl() {
-        return new StackImpl(10);
+    private StackImpl<Integer> getImpl() {
+        return new StackImpl<Integer>(10);
     }
 
     private void assertListEquals(List<Integer> expected, List<Integer> actual) {
@@ -68,7 +68,7 @@ public class StackTest {
     }
 
     @Test
-    public void testSizeMethod(){
+    public void testSizeMethod() {
         //given
         s.push(100);
         //when
@@ -78,7 +78,7 @@ public class StackTest {
     }
 
     @Test
-    public void testCapacityIncrease(){
+    public void testCapacityIncrease() {
 
         //given
         s.push(10);
