@@ -7,7 +7,8 @@ import org.junit.Test;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 public class StackTest {
     Stack<Integer> s;
@@ -108,5 +109,10 @@ public class StackTest {
         int popValue = s.pop();
         //then
         assertEquals(10, popValue);
+    }
+
+    @Test
+    public void emptyStackTesCase() {
+        assertNull(s.pop());
     }
 }

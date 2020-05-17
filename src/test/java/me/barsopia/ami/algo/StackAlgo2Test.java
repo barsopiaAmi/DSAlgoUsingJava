@@ -36,4 +36,10 @@ public class StackAlgo2Test {
         StackAlgo2 s = new StackAlgo2();
         assertTrue(s.isBalanced("()()()()()()"));
     }
+
+    @Test
+    public void functionIsBalancedTestCase6() {
+        StackAlgo2 s = new StackAlgo2();
+        assertFalse(s.isBalanced("}][}}(}][))]"));
+    }
 }

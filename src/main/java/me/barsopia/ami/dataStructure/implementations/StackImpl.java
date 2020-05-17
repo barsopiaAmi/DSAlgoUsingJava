@@ -28,14 +28,17 @@ public class StackImpl<T> implements Stack<T> {
     }
 
     public T pop() {
+        if (top == 0) {
+            return null;
+        }
         top--;
-        T topValue = (T)values[top];
+        T topValue = (T) values[top];
         values[top] = null;
         return topValue;
     }
 
     public List<T> getAllElement() {
-        return Arrays.asList((T[])values);
+        return Arrays.asList((T[]) values);
     }
 
     public int getSizeOfStack() {

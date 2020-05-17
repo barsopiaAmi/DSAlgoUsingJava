@@ -31,6 +31,7 @@ public class StackAlgo2 extends StackImpl<Character> {
     }
 
     private boolean popAndCompare(char comparing) {
-        return super.pop() == comparing;
+        Character popE = super.pop();
+        return popE != null && popE == comparing;
     }
 }
