@@ -1,5 +1,7 @@
 package me.barsopia.ami.dataStructure.interfaces;
 
+import java.util.Arrays;
+
 public class StackImplOptimized {
     public int[] values;
     int top;
@@ -21,7 +23,11 @@ public class StackImplOptimized {
         return topValue;
     }
 
-    public int[] getAllElement() {
+    public int[] getAllElements() {
+        return Arrays.copyOfRange(values, top, values.length);
+    }
+
+    public int[] getInternalArray() {
         return values;
     }
 

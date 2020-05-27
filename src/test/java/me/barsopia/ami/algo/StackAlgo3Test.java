@@ -26,8 +26,7 @@ public class StackAlgo3Test {
 //        h1=reverse(h1);
 //        h2=reverse(h2);
 //        h3=reverse(h3);
-        int maxLevel = s.getMaxCommonLevel(h1, h2, h3);
-        return maxLevel;
+        return s.getMaxCommonLevel(h1, h2, h3);
     }
 
     public static void main(String[] args) throws IOException {
@@ -85,10 +84,10 @@ public class StackAlgo3Test {
         int[] stack1 = {3, 2, 1, 1, 1};
         int[] stack2 = {4, 3, 2};
         int[] stack3 = {1, 1, 4, 1};
-        stack1 = reverse(stack1);
-        stack2 = reverse(stack2);
-        stack3 = reverse(stack3);
+        reverse(stack1);
+        reverse(stack2);
+        reverse(stack3);
         int maxLevel = s.getMaxCommonLevel(stack1, stack2, stack3);
-        Assert.assertEquals(5, maxLevel);
+        Assert.assertEquals(7, maxLevel);
     }
 }
