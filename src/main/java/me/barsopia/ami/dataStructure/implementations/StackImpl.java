@@ -1,13 +1,15 @@
 package me.barsopia.ami.dataStructure.implementations;
 
+import me.barsopia.ami.dataStructure.interfaces.DSPerfAPI;
 import me.barsopia.ami.dataStructure.interfaces.Stack;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class StackImpl<T> implements Stack<T> {
+public class StackImpl<T> implements Stack<T>, DSPerfAPI {
     int top;
     Object[] values;
+    int stepCount = 0;
 
     public StackImpl(int capacity) {
         top = 0;
@@ -43,5 +45,15 @@ public class StackImpl<T> implements Stack<T> {
 
     public int getSizeOfStack() {
         return top;
+    }
+
+    @Override
+    public T peek() {
+        return (T) values[top];
+    }
+
+    @Override
+    public int getGetLastActionSteps() {
+        return 0;
     }
 }

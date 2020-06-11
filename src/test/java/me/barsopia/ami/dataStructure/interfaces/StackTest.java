@@ -7,6 +7,7 @@ import org.junit.Test;
 import java.util.Arrays;
 import java.util.List;
 
+import static me.barsopia.ami.helper.TestHelper.assertListEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
@@ -17,12 +18,6 @@ public class StackTest {
         return new StackImpl<>(10);
     }
 
-    private void assertListEquals(List<Integer> expected, List<Integer> actual) {
-        assertEquals("different array size", expected.size(), actual.size());
-        for (int i = 0; i < actual.size(); i++) {
-            assertEquals("different at index:" + i, expected.get(i), actual.get(i));
-        }
-    }
 
     @Before
     public void beforeEachTest() {
