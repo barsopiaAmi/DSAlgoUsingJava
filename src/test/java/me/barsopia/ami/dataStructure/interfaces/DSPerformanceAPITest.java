@@ -1,5 +1,6 @@
 package me.barsopia.ami.dataStructure.interfaces;
 
+import me.barsopia.ami.algo.PrintPattern;
 import me.barsopia.ami.dataStructure.implementations.HashMap;
 import me.barsopia.ami.model.Student;
 import org.junit.Assert;
@@ -63,5 +64,10 @@ public class DSPerformanceAPITest {
         return new HashMap();
     }
 
+    @Test
+    public void printP(){
+        PrintPattern p=new PrintPattern();
+        p.printPattern(7);
+    }
 
 }
